@@ -119,7 +119,7 @@
 									</div>
 								</div>
 								<div class="czh_hha">
-									<a href="#/cat">→</a>
+									<a href="#/no3">→</a>
 								</div>
 							</div>
 						</div>
@@ -139,7 +139,7 @@
 												茶叶源于中国，茶叶最早是被作为祭品使用的。但从春秋后期就被人们作为菜食，在西汉中期发展为药用，西汉后期才发展为宫廷高级饮料，普及民间作为普通饮料那是西晋以后的事。发现最早人工种植茶叶的遗迹在浙江余姚的田螺山遗址，已有6000多年的历史。饮茶始于中国。
 											</div>
 											<div class="dndsahdsa">
-												<a href="#/b">了解我们</a>
+												<a href="#/no6">了解我们</a>
 											</div>
 										</div>  
 									</div>
@@ -211,7 +211,9 @@
 							</div>
 						   
 						</div>
-						<div class="paodong">
+						<div class="paodong" style='display: flex;padding: 0 40px;'>
+							<n2 v-for="i in 4" :b_num="i*138"></n2>
+							<n2 b_num=567></n2>
 						</div>
 						<div class="hetea">
 							<div class="jodsajdas">
@@ -225,7 +227,7 @@
 								</div>
 							</div>
 						</div>
-						<!-- 下面是效果不会加 -->
+
 						<div class="yjr_weibu">
 							<div class="yjr_dasdas">
 								<div class="yjr_ladjaos">
@@ -274,6 +276,13 @@
 									
 				</div>
 		</template>
+		<template id="n2">
+				<div style="text-align: center; width: 20%;">
+					<div style="font-size: 60px;font-family: courier new;color: #3c3c3c;">
+						{{num}}
+					</div>
+				</div>
+			</template>
 		<template id="no3">
 			<div style="padding-top: 80px;">
 				<div class="list">
@@ -286,7 +295,7 @@
 					<div class="cent">
 						<div v-if="type=='全部'">
 							<div class="cont" v-for="(i,$index) in arr">
-								<a href="#/cat_info" @click="a_str1(arr[$index])">
+								<a href="#" @click="a_str1(arr[$index])">
 									<div class="item">
 										<img :src="i.image" alt="">
 										<h6>{{i.title}}</h6>
@@ -301,7 +310,7 @@
 						</div>
 						<div v-else="">
 							<div class="cont" v-for="(i,$index) in arr" v-if="i.type == type">
-								<a href="#/cat_info" @click="a_str1(arr[$index])">
+								<a href="#" @click="a_str1(arr[$index])">
 										<div class="item">
 										<img :src="i.image" alt="">
 										<h6>{{i.title}}</h6>
@@ -333,13 +342,13 @@
 						</ul> 
 				</div>
 				<div class="pics_mubu">
-					<button @click="closebtn">×</button>
-					<button class="play_pause" @click="pausebtn"><i class="el-icon-video-pause iconfont" style="font-size:22px;">&#xe659;</i></button>
+					<button>×</button>
+					<button class="play_pause"><i class="el-icon-video-pause iconfont" style="font-size:22px;">&#xe659;</i></button>
 					<div class="photoes" v-for="(i,$index) in img_arr" :style="$index==index?{'opacity':'1'}:{'opacity':'0'}">
 						<img :src="i" alt="">
 					</div>
-					<button class="prev" @click="prevpic"><i class="el-icon-arrow-left iconfont" style="font-size:22px;vertical-align: middle;">&#xe601;</i></button>
-					<button class="next" @click="nextpic"><i class="el-icon-arrow-right iconfont" style="font-size:22px;vertical-align: middle;">&#xe603;</i></button>
+					<button class="prev"><i class="el-icon-arrow-left iconfont" style="font-size:22px;vertical-align: middle;">&#xe601;</i></button>
+					<button class="next"><i class="el-icon-arrow-right iconfont" style="font-size:22px;vertical-align: middle;">&#xe603;</i></button>
 					<div class="list_photoes">
 						<div style="overflow: hidden;display: table;margin:auto;">
 							<img v-for="(i,$index) in img_arr" :src="i" alt="" @click="index=$index">
@@ -348,17 +357,31 @@
 				</div>
 			</div>
 		</template>
+		<template id="n5">
+				<div style="max-width: 920px;min-height: 164px;display: flex;justify-content: space-between;">
+						<div>
+							<p style="font-weight: bold;">喝什么茶叶好?春天适合喝什么茶?喝白茶喝什么茶叶好?</p>
+							<p style="font-size: 14px;padding: 20px 0;">2017年10月27日，世界卫生组织国际癌症研究机构公布的致癌物清单初步整理参考，茶在3类致癌物清单中。属于对人类致癌性可疑，尚无充分的人体或动物数据的物质类。</p>
+							<p>阅读正文 →</p>
+						</div>
+						 <div>
+							<img src="https://ccdn.goodq.top/caches/9b69daffc17579b848483c854813cad2/aHR0cHM6Ly81Y2RkM2FhNWM0NmVhLnQ3My5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTkvMDUvNzQwMmZhZTFiYWE3OTgxODA4MWYwM2I2N2UwZTU0ZDItMjAweDEzMC5qcGc_p_p100_p_3D.jpg" alt="">
+						 </div>
+					 </div>
+					 
+		</template>
 		<template id="no5">
 			<div>
 				 <div style="min-height: 260px;max-width: 1920;">
 					<img style="width: 100%;height: 100%;" src="https://ccdn.goodq.top/caches/9b69daffc17579b848483c854813cad2/aHR0cHM6Ly81Y2RkM2FhNWM0NmVhLnQ3My5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTkvMDUvOTIwYWRjMGM1M2U4OGQ2MTY0OWE0MzYwMmY5MWQ0NzQuanBn.jpg" alt="">
 				 </div>
 				 <div style="overflow: hidden;padding: 10px 10%;">
-				 	<div style="width: 200px;min-height: 500px;background: brown;float: left;">
+				 	<div style="width: 200px;min-height: 500px;float: left;">
 				 		<div style="text-align: center;line-height: 40px;border-bottom: 1px solid greenyellow;">
 				 			<a href="#/no5">
 				 				全部新闻
-				 			</a>
+							 </a>
+						
 				 		</div>
 				 		<div style="text-align: center;line-height: 40px;border-bottom: 1px solid greenyellow;">
 				 			<a href="#/no5/no2">
@@ -438,18 +461,18 @@
 					</div>
 				</div>
 				<div class="lplpad">
-					<div class="jodajda">
-						<div class="czhmap" id="container">
-		
-						</div>
+					<div style="width: 90%;margin: 0 auto;">
+					<div id="allmap" style="height:400px;margin:0 auto;margin-top:50px;margin-bottom: 50px;"></div>
 					</div>
 				</div>
 			</div>
 		</template>
 	</body>
+	
 	<script src="vue.js"></script>
 	<script src="vue-router.js"></script>
 	<script src="swiper.min.js"></script>
+	<script src="https://api.map.baidu.com/api?v=3.0&ak=ZVxQBFByXwIR6q06AXIHvxOeIRKMkO1F"></script>
 	<script>
 		var router = new VueRouter({
 			routes:[
@@ -644,14 +667,43 @@
 			}
 		}}},
 			 {path:'/no5',component:{template:'#no5'},children:[
-			      {path:'/',component:{template:'<p>全部新闻</p>'}},
-			      {path:'no2',component:{template:'<p>新茶动态</p>'}},
-			      {path:'no3',component:{template:'<p>产品新闻</p>'}}, 
+			      {path:'/',component:{template:'<n5></n5>'}},
+			      {path:'no2',component:{template:'<n5></n5>'}},
+			      {path:'no3',component:{template:'<n5></n5>'}}, 
 			 ]},
-			 {path:'/no6',component:{template:'#no6'}, mounted() {
-       var map = new AMap.Map('container');  
-    },},
+			 {path:'/no6',component:{template:'#no6',mounted(){
+var map = new BMap.Map("allmap");
+// var point = new BMap.Point(116.331398, 39.897445);北京的经纬度
+map.addControl(new BMap.NavigationControl());
+map.addControl(new BMap.ScaleControl());
+map.addControl(new BMap.OverviewMapControl());
+map.addControl(new BMap.MapTypeControl());
+map.centerAndZoom('苏州市外河桥', 11);
+}}},
 			]
+		})
+		Vue.component('n5',{
+			template:'#n5'
+		})
+		Vue.component('n2', {
+			template: '#n2',
+			props:['b_num','b_title'],
+			data() {
+				return {
+					num: 0,
+					title: this.b_title
+				}
+			},
+			mounted() {
+				
+					var time = setInterval(() => {
+					this.num++
+						if(this.num >= this.b_num) {
+							this.num = this.b_num
+							clearInterval(time)
+						}
+				}, 567/this.b_num)
+			}
 		})
 		new Vue({
 			el:"#box",
@@ -683,4 +735,5 @@
 				},
 			})        
 		</script>
+	
 </html>
