@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        [v-cloak] {
+            display: none;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            text-decoration: none;
+        }
+
+        a:link,
+        .active a:visited {
+            color: #000;
+        }
+
+        .active a:link,
+        .active a:visited {
+            color: #fff;
+        }
+
+        .ow {
+            overflow: hidden;
+            height: 52px;
+        }
+
+        .abc-leave,
+        .abc-leave-to {
+            opacity: 1;
+            left: 1px !important;
+        }
+
+        .abc-leave-active,
+        .abc-enter-active {
+            transition: 1s;
+        }
+
+        .abc-leave-to {
+            opacity: 0;
+        }
+
+        .abc-enter {
+            opacity: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box" style="position: relative;">
+        <div style="width: 100%;;position: absolute;padding: 20px 30px;box-sizing: border-box;">
+            <div style="width: 100%;display: flex;line-height: 60px;">
+                <div>
+                    <div style="padding: 10px 50px;"><img style="max-width: 130px;max-height: 30px;"
+                            src="https://ccdn.goodq.top/caches/0aa02806352a2c565f61961c812e84a8/aHR0cHM6Ly81N2UyNDNhYWE3NzlhLnQ3My5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTYvMTAvMmE4YWZmM2RkZmJkYWU5YmFjMjhmOTczNGUzOTE1NWMucG5n.png"
+                            alt=""></div>
+                </div>
+                <div style="flex: 1;">
+                    <div class="active" style="float: left;line-height: 60px;padding: 0 10px;" v-for="i in arr">
+                        <a :href="i.path">
+                            {{i.name}}
+                        </a>
+                    </div>
+                </div>
+
+                <div>
+                    <div style="display: flex;color:#fff;">
+                        <div style=" width: 27px;height: 23px;"><img style="width: 100%;height: 100%;"
+                                src="https://ccdn.goodq.top/caches/0aa02806352a2c565f61961c812e84a8/aHR0cDovLzU3ZTI0M2FhYTc3OWEudDczLnFpZmVpeWUuY29tL3FmeS1jb250ZW50L3VwbG9hZHMvMjAxNi8xMC9lNjQyMzA1ZmUwZjdjY2QxYjdjZTM5ZjEwMzNmZmViZi5wbmc_p_p100_p_2FYXR0YWNobWVudF9pZD05ODUw.png"
+                                alt=""></div>
+                        | <span style='font-size: 24px;'>4</span>00200200
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div style="min-height: 500px;">
+            <router-view></router-view>
+        </div>
+    </div>
+
+    <template id="no1">
+        <div>
+            <div
+                style="min-height: 660px;background-image: url('http://57e243aaa779a.t73.qifeiye.com/qfy-content/uploads/2016/10/f549634402d680ae8cccd5a6039000b5.jpg'); background-repeat:no-repeat; background-size:cover; background-attachment:scroll; background-position:0 36%;">
+                <div style="background: rgba(0, 0, 0, .5);min-height: 660px;">
+                    <div
+                        style="text-align: center;font-size: 40px;width:940px;height: 150px;position: absolute;left: 50%;top: 50%;margin-left: -470px;margin-top: -75px;color: #fff;">
+                        <div name='abc'>
+                            <transition v-for='(item,$index) in brr'>
+                                <p>
+                                    <span v-if="num==$index">{{item}}</span>
+                                </p>
+                            </transition>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </template>
+    <template id="no2">
+        <div>
+            <div
+                style="min-height: 350px;background-image: url('https://ccdn.goodq.top/caches/0aa02806352a2c565f61961c812e84a8/aHR0cHM6Ly81N2UyNDNhYWE3NzlhLnQ3My5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTYvMTAvMDViZjRkNzAxMDU2NTNkNjI2ODQ2NmY4ZGY4NzFmM2YuanBn.jpg'); background-repeat:no-repeat; background-size:cover; background-attachment:scroll; background-position:0 36%;">
+                <div style="background: rgba(0, 0, 0, .5);min-height:350px;"></div>
+            </div>
+            <div style="text-align: center;padding: 40px 0;">
+                <h1 style="padding: 10px 0;">产品发布</h1>
+                <p><span
+                        style="display:block;margin: 0 auto 20px auto;height: 2px;background: cadetblue;width: 50px;"></span>
+                </p>
+                <p>応捠捡换攴朰朸妀夲夳夵壱，売圢圤圥圦圧圪咐咑厺厼厽帄帇</p>
+                <div style="padding: 40px 0;">
+                    <img src="https://ccdn.goodq.top/caches/0aa02806352a2c565f61961c812e84a8/aHR0cHM6Ly81N2UyNDNhYWE3NzlhLnQ3My5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTYvMDkvNGQxZGJmMGU0MTg5YWUxYWU1ZjNmZDkyZjc3OWRhMGItNzY2eDUwMC5wbmc_p_p100_p_3D.png"
+                        alt="">
+                </div>
+            </div>
+        </div>
+
+    </template>
+    <template id="no3">
+        <div>
+            <div style="overflow: hidden;">
+
+                <div
+                    style="min-height: 350px;background-image: url('https://ccdn.goodq.top/caches/0aa02806352a2c565f61961c812e84a8/aHR0cHM6Ly81N2UyNDNhYWE3NzlhLnQ3My5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTYvMTAvOTk4ZGE5MWY4MGZiNDg3NjU4MjI2MDQ1NzBhY2RmNDYuanBn.jpg'); background-repeat:no-repeat; background-size:cover; background-attachment:scroll; background-position:0 36%;">
+                    <div style="background: rgba(0, 0, 0, .5);min-height: 350px;"></div>
+                </div>
+                <div style="padding: 40px 10%;">
+                    <div style="width: 200px;min-height: 500px;float: left;padding: 60px 0;">
+                        <div style="text-align: center;line-height: 40px;border-bottom: 1px solid #e5e5e5;">
+                            <a href="#/no3">
+                                全部新闻
+                            </a>
+                        </div>
+                        <div style="text-align: center;line-height: 40px;border-bottom: 1px solid #e5e5e5;">
+                            <a href="#/no3/no2">
+                                公司新闻
+                            </a>
+                        </div>
+                        <div style="text-align: center;line-height: 40px;border-bottom: 1px solid #e5e5e5;">
+                            <a href="#/no3/no3">
+                                产品新闻
+                            </a>
+                        </div>
+                    </div>
+                    <div style="float: left;padding: 10px 20px;">
+                        <router-view></router-view>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </template>
+    <template id="n5">
+        <div style="max-width: 920px;min-height: 164px;justify-content: space-between;">
+            <div
+                style="max-width: 900px;min-height: 30px;line-height: 30px;display: flex;justify-content: space-between;border-bottom: 1px solid #ccc;margin-bottom: 20px;padding: 20px 0;">
+                <h1>咨询发布</h1><span
+                    style="border-radius: 15px;padding: 0px 15px;display: block;border: 1px solid #0db4be">联系我们</span>
+            </div>
+            <div style=" display: flex;">
+                <div style="margin: 0 10px;">
+                    <img src="https://ccdn.goodq.top/caches/0aa02806352a2c565f61961c812e84a8/aHR0cHM6Ly81N2UyNDNhYWE3NzlhLnQ3My5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTYvMTAvMDViZjRkNzAxMDU2NTNkNjI2ODQ2NmY4ZGY4NzFmM2YtMTgweDEyMC5qcGc_p_p100_p_3D.jpg"
+                        alt="">
+                </div>
+                <div>
+                    <p style="font-weight: bold;"> 三大能源停征价格调节基金为煤炭资源税改革清路</p>
+                    <p style="font-size: 14px;padding: 20px 0;">
+                        起飞页的工作团队是一群热爱互联网及软件事业的大伙伴和小伙伴，经验丰富、成熟稳定，基于对网站出版行业的热爱、对人人都能做出精美网站的向往，公司投入一千万元人民币，历时两年时间打造出起飞页平台。截至2015年底，在起飞页上创建的网站已超过10万+。
+                    </p>
+                </div>
+            </div>
+
+
+        </div>
+
+    </template>
+    <template id="n6">
+        <div style="max-width: 920px;min-height: 164px;justify-content: space-between;">
+            <div
+                style="max-width: 900px;min-height: 30px;line-height: 30px;display: flex;justify-content: space-between;border-bottom: 1px solid #ccc;margin-bottom: 20px;padding: 20px 0;">
+                <h1>咨询发布</h1><span
+                    style="border-radius: 15px;padding: 0px 15px;display: block;border: 1px solid #0db4be">联系我们</span>
+            </div>
+            <div style=" display: flex;">
+                <div style="margin: 0 10px;">
+                    <img src="https://ccdn.goodq.top/caches/0aa02806352a2c565f61961c812e84a8/aHR0cHM6Ly81N2UyNDNhYWE3NzlhLnQ3My5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTYvMTAvOWVmMDY3ODQ0ZDIzZmFiZDA2Y2NkNjVkZGY2MWQyZDgtMTgweDEyMC5qcGc_p_p100_p_3D.jpg"
+                        alt="">
+                </div>
+                <div>
+                    <p style="font-weight: bold;"> 三大能源停征价格调节基金为煤炭资源税改革清路</p>
+                    <p style="font-size: 14px;padding: 20px 0;">
+                        起飞页的工作团队是一群热爱互联网及软件事业的大伙伴和小伙伴，经验丰富、成熟稳定，基于对网站出版行业的热爱、对人人都能做出精美网站的向往，公司投入一千万元人民币，历时两年时间打造出起飞页平台。截至2015年底，在起飞页上创建的网站已超过10万+。
+                    </p>
+                </div>
+            </div>
+
+
+        </div>
+
+    </template>
+    <template id="n7">
+        <div style="max-width: 920px;min-height: 164px;justify-content: space-between;">
+            <div
+                style="max-width: 900px;min-height: 30px;line-height: 30px;display: flex;justify-content: space-between;border-bottom: 1px solid #ccc;margin-bottom: 20px;padding: 20px 0;">
+                <h1>咨询发布</h1><span
+                    style="border-radius: 15px;padding: 0px 15px;display: block;border: 1px solid #0db4be">联系我们</span>
+            </div>
+            <div style=" display: flex;">
+                <div style="margin: 0 10px;">
+                    <img src="https://ccdn.goodq.top/caches/0aa02806352a2c565f61961c812e84a8/aHR0cHM6Ly81N2UyNDNhYWE3NzlhLnQ3My5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTYvMTAvOWFjMDViN2VmMzVkYmVhOGU5ZTI2MDQ2OGY4M2E1MjEtMTgweDEyMC5qcGc_p_p100_p_3D.jpg"
+                        alt="">
+                </div>
+                <div>
+                    <p style="font-weight: bold;"> 三大能源停征价格调节基金为煤炭资源税改革清路</p>
+                    <p style="font-size: 14px;padding: 20px 0;">
+                        起飞页的工作团队是一群热爱互联网及软件事业的大伙伴和小伙伴，经验丰富、成熟稳定，基于对网站出版行业的热爱、对人人都能做出精美网站的向往，公司投入一千万元人民币，历时两年时间打造出起飞页平台。截至2015年底，在起飞页上创建的网站已超过10万+。
+                    </p>
+                </div>
+            </div>
+
+
+        </div>
+
+    </template>
+</body>
+<script src="vue.js"></script>
+<script src="vue-router.js"></script>
+<script>
+    var router = new VueRouter({
+        routes: [
+            {
+                path: '/', component: {
+                    template: '#no1',
+                    mounted() {
+                        setInterval(() => {
+                            this.btn()
+                        }, 2000)
+                    },
+                    methods: {
+                        btn() {
+                            if (this.i_type) {
+                                this.num++
+                                if (this.num >= this.brr.length) {
+                                    this.num = 0
+                                }
+                                this.i_type = false
+                                setTimeout(() => {
+                                    this.i_type = true
+                                }, 2000)
+                            }
+                        }
+                    },
+                    data() {
+                        return {
+                            num: 0,
+                            i_type:true,
+                            brr: [
+                                "我们无法做到完美，  但追求完美能让人卓越",
+                                "平台三大优势",
+                                "功能多样，满足您的所有需求",
+
+                            ]
+                        }
+                    }
+                }
+            },
+            { path: '/no2', component: { template: '#no2' } },
+            {
+                path: '/no3', component: { template: '#no3'}, children: [
+                    { path: '/', component: { template: '<n5></n5>' } },
+                    { path: 'no2', component: { template: '<n6></n6>' } },
+                    { path: 'no3', component: { template: '<n7></n7>' } },
+                ]
+            },
+        ]
+    })
+    Vue.component('n5', {
+        template: '#n5'
+    })
+    Vue.component('n6', {
+        template: '#n6'
+    })
+    Vue.component('n7', {
+        template: '#n7'
+    })
+    new Vue({
+        el: "#box",
+        data: {
+            arr: [
+                { name: '首页', path: '#/' },
+                { name: '产品发布', path: '#/no2' },
+                { name: '咨讯发布', path: '#/no3' },
+            ],
+
+        },
+        router
+    })
+</script>
+
+</html>
